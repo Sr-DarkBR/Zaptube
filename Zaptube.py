@@ -25,8 +25,8 @@ class VideoExtractor:
         ydl_opts = {
             'outtmpl': str(self.output_dir / '%(title)s.%(ext)s'),
             'format': self._get_format_selector(quality, audio_only),
-            'writeinfojson': False, 
-            'writethumbnail': False,
+            'writeinfojson': True, 
+            'writethumbnail': True,
         }
         
         if audio_only:
